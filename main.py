@@ -1,11 +1,11 @@
 import requests
 import os
 
-TOKEN = os.environ.get("TELEGRAM_TOKEN")
-CHAT_ID = os.environ.get("CHAT_ID")
+TOKEN = "8886838863:AAE_EP7kWQ5dDVYmhKbi7w-3rLwi2jRMf-0"
+CHAT_ID = 7709779646
 
 OWM_Endpoint = "https://api.openweathermap.org/data/2.5/forecast"
-OWM_api_key = os.environ.get("OWM_API_KEY")
+OWM_api_key = "8f7e4bb4b3ba603794fafcf366e1ad88"
 
 MY_LAT = 54.356030
 MY_LONG = 18.646120
@@ -33,7 +33,11 @@ for day in weather_data["list"]:
 
 if will_rain:
     message = "It will rain today! Bring an umbrella!"
-    url = f"https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id={CHAT_ID}&text={message}"
 
-    r = requests.get(url)
-    print(r.json())
+else:
+    message = "No rain today!"
+
+url = f"https://api.telegram.org/bot{TOKEN}/sendMessage?chat_id={CHAT_ID}&text={message}"
+
+r = requests.get(url)
+print(r.json())
