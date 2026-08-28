@@ -4,7 +4,7 @@ import os
 TOKEN = os.environ.get("TELEGRAM_TOKEN")
 CHAT_ID = os.environ.get("CHAT_ID")
 
-OWM_Endpoint = os.environ.get("OWM_ENDPOINT")
+OWM_Endpoint = "https://api.openweathermap.org/data/2.5/forecast"
 OWM_api_key = os.environ.get("OWM_API_KEY")
 
 MY_LAT = 54.356030
