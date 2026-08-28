@@ -14,7 +14,7 @@ on:
     # ║                                                                ║
     # ║  Use https://time.is/UTC to find your local time in UTC       ║
     # ╚═══════════════════════════════════════════════════════════════╝
-    - cron: '55 18 * * *'
+    - cron: '58 18 * * *'
 
   # This adds a "Run workflow" button so you can test manually
   workflow_dispatch:
@@ -38,8 +38,5 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run script
-        env:
-          # Your secrets are available as environment variables
-          # Add more secrets in Settings > Secrets > Actions
       
         run: python main.py
